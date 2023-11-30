@@ -17,10 +17,10 @@ async function checkWeather (city){
     else {
         var data = await response.json();
 
-    document.querySelector(".city").innerHTML = data.name;
-    document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + " °C";
-    document.querySelector(".humidity").innerHTML = data.main.humidity + " %";
-    document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
+    document.querySelector(".city").innerText = data.name;
+    document.querySelector(".temp").innerText = Math.round(data.main.temp) + " °C";
+    document.querySelector(".humidity").innerText = data.main.humidity + " %";
+    document.querySelector(".wind").innerText = data.wind.speed + " km/h";
 
     if(data.weather[0].main == "Clouds"){
         weatherIcon.src ="images/clouds.png";
